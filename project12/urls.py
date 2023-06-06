@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-
+from app1.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('app/',include('app.urls'))
-    
+    path('app/',include('app.urls')),
+    path('Specific_static_app1/',Specific_static_app1,name='Specific_static_app1')
 ]
